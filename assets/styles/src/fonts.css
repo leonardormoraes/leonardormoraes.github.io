@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Raleway';
+    font-weight: normal;
+    src: url('../../fonts/Raleway-Medium.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: normal;
+    src: url('../../fonts/Rubik-Regular.ttf');
+    font-display: swap;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 3.2em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
