@@ -22,5 +22,24 @@ h1 {
 }
 
 h2 {
+    font-size: 4.8em;
+    text-align: center;
+}
+
+h2.title {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+h2.title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #FFCA2C;
+}
+
+h3 {
     font-size: 1.6em;
 }

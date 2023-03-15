@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 ::selection {
@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    /* padding-top: 50px; */
+    padding-top: 50px;
     background: #000;
 }
 
@@ -36,8 +36,20 @@ img {
     max-width: 100%;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.d-grid {
+    display: grid;
+}
+
 .d-flex {
     display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
 }
 
 .align-center {
@@ -54,8 +66,24 @@ img {
     margin-right: auto;
 }
 
+.pl-20 {
+    padding-left: 20px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
 .mb-16 {
     margin-bottom: 16px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
 }
 
 .content-1280 {
@@ -70,6 +98,14 @@ img {
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.bkg-black {
+    background-color: #111111;
+}
+
+.bkg-gray {
+    background-color: #222222;
 }
 
 .bkg-blue-linkedin {
@@ -95,11 +131,10 @@ img {
 .header {
     position: fixed;
     width: 100%;
-    height: 4rem;
+    height: 5rem;
     padding: 5px;
     top: 0;
     display: block;
-    background-color: #111111;
 }
 
 #menu {
@@ -129,19 +164,19 @@ img {
 
 #headline {
     padding: 100px 0;
-    background-image: url('../../images/bkg/bkg-headline.png');
+    background-image: url('../../images/bkg/bkg-dc.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: center 60%;
     background-repeat: no-repeat;
 }
 
-#headline .profile, .carousel .profile {
+#headline .profile {
     width: 80px;
     margin-bottom: 16px;
 }
 
-#headline a, .carousel a {
+#headline a {
     display: inline-block;
     margin: 0 3px;
     padding: 5px 12px;
@@ -150,51 +185,86 @@ img {
     transition: .3s;
 }
 
-#headline a:focus, #headline a:hover, .carousel a:focus, .carousel a:hover {
+#headline a:focus, #headline a:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 3px rgba(0,0,0,.6);
 }
 
-#headline a img, .carousel a img {
+#headline a img {
     display: inline-block;
     margin-right: 3px;
     vertical-align: middle;
 }
 
-
-
-.container-carousel {
-    width: 100vw;
-    max-width: 1920px;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url('../../images/bkg/bkg-headline.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center 60%;
-    background-repeat: no-repeat;
+#certificates header {
+    padding: 16px;
 }
 
-.carousel svg {
+#certificates header span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #3F3F3F;
+}
+#certificates header span:first-child {background: #FE6057;}
+#certificates header span:nth-of-type(2) {background: #FEBB30;}
+#certificates header span:last-child {background: #26C740;}
+
+#certificates .grid-2 {
+    grid-template-columns: 200px 1fr;
+}
+
+#certificates .bkg-gray {
+    padding: 20px 0;
+}
+
+#certificates .carousel {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#certificates .slick-list {
+    overflow: visible;
+}
+
+.slider-nav {
+    position: relative;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.slider-nav::before {
+    content: '';
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 16px;
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    left: 45%;
+    border-radius: 3px;
+    transform: rotate(-50deg) translateX(-60%);
+    background: #3F3F3F;
 }
 
-.carousel rect.scroll {
-    animation: scroll .8s infinite;
+.slick-arrow {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    outline: none;
+    transition: .3s;
 }
 
-@keyframes scroll {
-    to {
-        transform: translateY(10px);
-    }
+.slick-arrow:focus, .slick-arrow:hover {
+    transform: scale(1.1);
 }
 
-.slider-item {
-    display: grid !important;
-    place-items: center;
-    height: 100vh;
+.slick-slide {
+    transform: scale(.8);
+    transition: .3s;
+}
+.slick-current {
+    transform: scale(1);
 }

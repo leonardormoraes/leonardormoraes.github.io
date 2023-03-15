@@ -7,7 +7,7 @@ var autoprefix = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-clean-css');
 var browserSync = require('browser-sync');
 
-gulp.task('default', ['scripts', 'slick', 'styles'], function () { });
+gulp.task('default', ['scripts', 'styles'], function () { });
 
 gulp.task('scripts', function () {
 
@@ -15,19 +15,16 @@ gulp.task('scripts', function () {
     'assets/scripts/src/script.js',
   ];
 
-  gulp.src(files)
-    .pipe(concat('script.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('assets/scripts/dist'));
-});
-
-gulp.task('slick', function () {
-
-  var files = [
+  var slick = [
     'assets/scripts/src/slick.js',
   ];
 
   gulp.src(files)
+    .pipe(concat('script.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/scripts/dist'));
+
+  gulp.src(slick)
     .pipe(concat('slick.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('assets/scripts/dist'));
@@ -41,15 +38,25 @@ gulp.task('styles', function () {
     'assets/styles/src/mobile.css',
   ];
 
+  var slider = [
+    'assets/styles/src/slider.css'
+  ]
+
   gulp.src(files)
     .pipe(concat('style.min.css'))
+    .pipe(autoprefix('last 4 versions'))
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('assets/styles/dist/'));
+
+  gulp.src(slider)
+    .pipe(concat('slider.min.css'))
     .pipe(autoprefix('last 4 versions'))
     .pipe(minifyCSS())
     .pipe(gulp.dest('assets/styles/dist/'));
 });
 
 gulp.task('watch', function () {
-  gulp.watch('assets/scripts/src/*.js', ['scripts', 'slick']);
+  gulp.watch('assets/scripts/src/*.js', ['scripts']);
   gulp.watch('assets/styles/src/*.css', ['styles']);
 });
 
