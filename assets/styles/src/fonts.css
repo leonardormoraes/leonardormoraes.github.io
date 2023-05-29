@@ -12,6 +12,11 @@
     font-display: swap;
 }
 
+html {
+    font-family: 'Rubik', sans-serif;
+    font-size: 10px;
+}
+
 h1, h2, h3, h4 {
     font-family: 'Raleway', sans-serif;
     font-weight: normal;
@@ -42,4 +47,13 @@ h2.title::after {
 
 h3 {
     font-size: 1.6em;
+}
+
+h4 {
+    font-size: 2.8em;
+}
+
+p {
+    font-size: 1.6em;
+    line-height: 22px;
 }
