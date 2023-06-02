@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./assets/images/ico-internet.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/ico-internet.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <script type="module" crossorigin src="./assets/es/index.js"></script>
@@ -41,8 +41,8 @@
                     <a href="#our-clients" class="btn btn-scroll">Ver mais</a>
                 </div>
                 <div class="image-container mx-auto" data-aos="fade" data-aos-delay="300">
-                    <div class="image-bg"></div>
-                    <img src="./assets/images/ico-internet.svg" alt="" class="logo">
+                    <div class="image-bg" data-aos="zoom-in" data-aos-delay="600"></div>
+                    <img src="assets/ico-internet.svg" alt="" class="logo">
                 </div>
             </div>
         </section>
@@ -295,21 +295,24 @@
             <div class="container">
                 <h1 class="text-center mx-auto" data-aos="fade-up">Deixa tudo isso com a gente</h1>
                 <form class="mx-auto">
-                    <div class="form-control">
-                        <label for=""></label>
-                        <input type="text" placeholder="Nome">
-                    </div>
-                    <div class="form-control">
-                        <label for=""></label>
-                        <input type="text">
-                    </div>
-                    <div class="form-control">
-                        <label for=""></label>
-                        <input type="text">
-                    </div>
+                    <label class="form-control">
+                        <input type="text" name="name" placeholder="Nome">
+                    </label>
+                    <label class="form-control">
+                        <input type="email" name="email" placeholder="E-mail">
+                    </label>
+                    <label class="form-control">
+                        <input type="tel" name="tel" placeholder="Celular">
+                    </label>
+                    <button type="submit" class="mx-auto">Contatar</button>
                 </form>
             </div>
         </section>
+        <div data-aos="fade-up">
+            <svg viewBox="0 0 1366 259" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 76.8889L37.9444 56.6834C75.8889 36.0986 151.778 -3.74309 227.667 0.999966C303.556 5.74302 379.444 56.968 455.333 81.9165C531.222 107.244 607.111 107.244 683 102.217C758.889 96.8097 834.778 87.3236 910.667 71.8612C986.556 56.968 1062.44 36.0986 1138.33 46.5333C1214.22 56.968 1290.11 96.8097 1328.06 117.395L1366 137.6V259.022H1328.06C1290.11 259.022 1214.22 259.022 1138.33 259.022C1062.44 259.022 986.556 259.022 910.667 259.022C834.778 259.022 758.889 259.022 683 259.022C607.111 259.022 531.222 259.022 455.333 259.022C379.444 259.022 303.556 259.022 227.667 259.022C151.778 259.022 75.8889 259.022 37.9444 259.022H0V76.8889Z" fill="#252529"/>
+            </svg>
+        </div>
     </main>
 
     <footer class="footer">
