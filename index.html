@@ -29,7 +29,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="main">
         <section class="hero" id="headline">
             <div class="container d-grid align-center">
                 <div>
@@ -291,18 +291,21 @@
                 </div>
             </div>
         </section>
-        <section class="hero" id="contact">
+        <section class="" id="contact">
             <div class="container">
                 <h1 class="text-center mx-auto" data-aos="fade-up">Deixa tudo isso com a gente</h1>
                 <form class="mx-auto">
                     <label class="form-control">
                         <input type="text" name="name" placeholder="Nome">
+                        <span>Inválido: campo vazio</span>
                     </label>
                     <label class="form-control">
                         <input type="email" name="email" placeholder="E-mail">
+                        <span>Inválido: o e-mail informado não está no padrão correto</span>
                     </label>
                     <label class="form-control">
                         <input type="tel" name="tel" placeholder="Celular">
+                        <span>Inválido: o celular informado não está no padrão correto</span>
                     </label>
                     <button type="submit" class="mx-auto">Contatar</button>
                 </form>
@@ -313,6 +316,11 @@
                 <path d="M0 76.8889L37.9444 56.6834C75.8889 36.0986 151.778 -3.74309 227.667 0.999966C303.556 5.74302 379.444 56.968 455.333 81.9165C531.222 107.244 607.111 107.244 683 102.217C758.889 96.8097 834.778 87.3236 910.667 71.8612C986.556 56.968 1062.44 36.0986 1138.33 46.5333C1214.22 56.968 1290.11 96.8097 1328.06 117.395L1366 137.6V259.022H1328.06C1290.11 259.022 1214.22 259.022 1138.33 259.022C1062.44 259.022 986.556 259.022 910.667 259.022C834.778 259.022 758.889 259.022 683 259.022C607.111 259.022 531.222 259.022 455.333 259.022C379.444 259.022 303.556 259.022 227.667 259.022C151.778 259.022 75.8889 259.022 37.9444 259.022H0V76.8889Z" fill="#252529"/>
             </svg>
         </div>
+        <a href="#headline" class="btn btn-scroll" aria-label="Back to the top">
+            <svg width="31" height="15" viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28.816 13.6447L17.7554 2.58417C16.4492 1.27793 14.3117 1.27793 13.0055 2.58417L1.94482 13.6447" stroke="#fff" stroke-width="2.54462" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
     </main>
 
     <footer class="footer">
